@@ -28,5 +28,4 @@ def get_items_as_number(driver, selector):
 def capture_a_screenshot_and_save_it(driver):
     # Capture a screenshot and save it if the assertion fails
     now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-    driver.get_screenshot_as_file('screenshots/screenshot-%s.png' % now)
-    #print("Test failed! Screenshot saved at:", 'allure_report/screenshot-%s.png' % now)
+    allure.attach(driver.get_screenshot_as_png(), 'screenshot-%s' % now, attachment_type=AttachmentType.PNG)

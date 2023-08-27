@@ -69,9 +69,5 @@ class TestDemo:
         try:
             assert actual_balance == expected_balance, f'Expected Balance: {expected_balance}, but got: {actual_balance}'
         except AssertionError as e:
-            # Capture a screenshot and save it if the assertion fails
-            #self.capture_a_screenshot_and_save_it(driver)
-            now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-            driver.get_screenshot_as_file('allure_report/screenshot-%s.png' % now)
-            allure.attach(driver.get_screenshot_as_png(),'screenshot-%s' % now, attachment_type=AttachmentType.PNG)
+            capture_a_screenshot_and_save_it(driver)
             raise e
