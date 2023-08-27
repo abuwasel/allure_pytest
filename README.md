@@ -2,6 +2,7 @@
 
 # To run test and create report directory
 pytest --alluredir=allure_report/ test_demo_report.py
+
 pytest --alluredir=allure_report/ test_demo_report_with_selenium.py
 
 # To run and open allure report
