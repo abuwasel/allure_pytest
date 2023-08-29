@@ -40,7 +40,10 @@ def selectors():
         'Customers table': 'body > div > div > div.ng-scope > div > div.ng-scope > div > div > table > tbody'
         }
 
-
+@allure.epic("Login")
+@allure.story("Login & deposit, withdrawal, balance Functionality")
+@allure.severity(allure.severity_level.CRITICAL)
+# Allure supports next severity levels: TRIVIAL, MINOR, NORMAL, CRITICAL , BLOCKER. By default, all tests marks with NORMAL severity.
 class TestDemo:
 
     @allure.title("Check the balance of the account is 750")
