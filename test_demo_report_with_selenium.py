@@ -48,6 +48,7 @@ class TestDemo:
 
     @allure.title("Check the balance of the account is 750")
     @allure.description("Enter the bank as a user, make a deposit of 1000 NIS and a withdrawal of 250, check that the balance of the account is 750")
+    @allure.label("owner", "Ibrahim Abu Wasel")
     def test_login_deposit_withdraw_check_balance(self, url, selectors, init_driver):
         driver = init_driver
         time.sleep(2)
